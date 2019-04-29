@@ -1,7 +1,7 @@
 {
     "title": "DWIN",
     "author": "dwin",
-    "description": "select * from learn",
+    "description": "迪文科技帮助文档",
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "styles": {
@@ -20,16 +20,15 @@
         "splitter",
         "expandable-chapters-small",
         "anchors",
-
         "github",
         "github-buttons",
         "sharing-plus",
         "anchor-navigation-ex",
-        "favicon"
+	"favicon"
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/maxAge18/dwin"
+            "url": "https://github.com/mxAge18/dwin"
         },
         "github-buttons": {
             "buttons": [{
@@ -64,8 +63,17 @@
                 "qq", "qzone", "linkedin", "pocket"
             ]
         },
-        "anchor-navigation-ex": {
-            "showLevel": true
+	"anchor-navigation-ex": {
+            "associatedWithSummary":false,
+            "showLevel":true,
+            "multipleH1": true,
+            "mode": "float",
+             "pageTop": {
+                  "showLevelIcon": false,
+                  "level1Icon": "fa fa-hand-o-right",
+                  "level2Icon": "fa fa-hand-o-right",
+                  "level3Icon": "fa fa-hand-o-right"
+    		}
         },
         "favicon":{
             "shortcut": "./source/images/favicon.jpg",
