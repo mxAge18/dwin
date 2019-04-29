@@ -14,9 +14,9 @@ DGUS屏点击按钮数据如何能自动上传到串口？
 
 注：基本触控只有放置到弹出菜单 或者弹出键盘数据录入才能根据其根地址传值，弹出菜单键值设置范围0000-00FE可以传值，其中00FF不传值（通常设置为关闭弹窗按键用于不需要传值的按钮）。
 
-**![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image030.gif) ![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image032.gif)**
 
- 
+
+![image-20190429162722258](../../images/image-20190429162722258.png) 
 
  
 
@@ -86,7 +86,7 @@ DGUS I屏触控控件右上角如下图1，键控选项是01到FF之间可以设
 
 如果是os程序触发每个周期只能执行一次。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image034.gif)![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image036.gif)
+![image-20190429162657576](../../images/image-20190429162657576.png)
 
 如果是DGUS II屏，要实现触摸屏操作模拟、代替触控，
 
@@ -134,7 +134,7 @@ DGUS屏格式化？
 
 2、DGUSII屏的格式化参考系统配置文件的Flash格式化，写入5AA5之后插卡，再下载的过程会先执行格式化NAND flash。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image038.gif)
+![image-20190429162633816](../../images/image-20190429162633816.png)
 
  
 
@@ -200,7 +200,7 @@ DGUS 5.04版本软件提示控件变量大于64？
 
 通常这个提示是在DGUS的软件会遇到，迪文屏可以选择每个页面64变量或者128变量模式，在软件的欢迎使用那里（触控及变量配置左边的按钮），预定义参数=》每页最大配置变量数更改为128，然后回到界面，要点击配置 =》输出配置文件，这个时候就把CONFIG文件配置RC=10, 然后把CONFIG.txt文件下载到屏里面就可以了。注意没有必要把工程关闭了，改下图的红色框可以切换的。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image040.gif) ![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image042.gif)
+![image-20190429162012588](../../images/image-20190429162012588.png)
 
  
 
@@ -224,11 +224,9 @@ DGUS 5.04版本软件提示控件变量大于64？
 
 访问0xB0变量地址是可以实现 **DGUS II**屏关闭单个触控文件：5A A5 0B 82 00B0 5AA5 0001 0905 0000 （关闭0001页面的第9个触控文件，按键值返回键码05(这键码值参考应用指南的表格第一列写如下图)，0000关闭触控
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image044.gif)
+![image-20190429162054994](../../images/image-20190429162054994.png)
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image046.gif)
-
-但是要注意基本触控，基础触控不能被控制开启/关闭，**他的序号其实不占用，他后面的控件编号实质号码要去掉前面基本触控的**。因此一旦在页面序号的排列中间时，生成13.BIN就会打乱可以控制的控件的顺序，把它们都调整到所有可控控件后面，这样方便键控的序号能一致。
+![image-20190429162113582](../../images/image-20190429162113582.png)但是要注意基本触控，基础触控不能被控制开启/关闭，**他的序号其实不占用，他后面的控件编号实质号码要去掉前面基本触控的**。因此一旦在页面序号的排列中间时，生成13.BIN就会打乱可以控制的控件的顺序，把它们都调整到所有可控控件后面，这样方便键控的序号能一致。
 
 1、打开触控控件的操作界面；
 
@@ -238,7 +236,7 @@ DGUS 5.04版本软件提示控件变量大于64？
 
 4、如果有多个控件需要控制，建议把基础控件移到最下方，需要控制的控件调整到最上面，依次放置；如下图：
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image048.gif)
+![image-20190429162136267](../../images/image-20190429162136267.png)
 
  
 
@@ -266,7 +264,7 @@ DGUS 5.04版本软件提示控件变量大于64？
 
 工程做好了，单要修改其中的一张，图片怎么替换？
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image050.gif)比如把中间的1图替换一下
+![image-20190429162435653](../../images/image-20190429162435653.png)比如把中间的1图替换一下
 
 **解决方法：**
 
@@ -443,7 +441,7 @@ DGUS II中的CFG文件如何使用？
 
 DGUS II中的CFG文件与过去DGUS中的CONFIG.txt不同，大体上功能是相同的，不过在CFG文件中用户能够配置的内容更多。从下表中详细罗列了CFG文件的配置方式。CFG文件中采用十六进制编译 ，可以通过Uedit32等软件进行编辑。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image052.gif)
+![image-20190429162502058](../../images/image-20190429162502058.png)
 
 注意事项：
 
@@ -453,7 +451,7 @@ DGUS II中的CFG文件与过去DGUS中的CONFIG.txt不同，大体上功能是�
 
 配置示例：
 
-![IMG_256](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image054.gif)
+![image-20190429162520265](../../images/image-20190429162520265.png)
 
  
 

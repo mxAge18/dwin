@@ -94,9 +94,9 @@ a、方法一：数据变量本身没有这个功能，用文本显示控件ASCI
 
 b、方法二：用艺术字变量选择右对齐(右对齐的意义参考问题1)，左边添加一个图标变量控件地址和艺术字变量设置一样，下限上限分别对应0-10，其中0-9的时候都指向图标0的小图片，也就是做9个小图片内容写0的生成的ICO图标文件，当地址值为10的时候图标控件地址指向不显示的10空图标，那么就可以补齐0了。这种方法的优势在于不需要多发其他的指令代码，用户繁琐的地方也只是需要做0-9的图标显示艺术字。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.gif)
 
- 
+
+​							![img](/images/clip_image002-6525669.gif) 
 
  
 
@@ -178,7 +178,7 @@ DGUS屏的数据变量是采用定点小数格式，也就是小数点的位置�
 
 ③DGUS II全系列产品新增“DGUS II文本显示”功能，完美解决点阵字库显示的锯齿难题。该功能在字库文件上做了升级，使字符边缘处理更加细腻平滑。字库用“DGUS II文本显示功能专用灰度字库生成软件”制作后，用“DGUS II文本显示”配置显示。效果对比如下.
 
-![IMG_256](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.gif)
+![IMG_256](../../images/clip_image002-6525704.gif)
 
 ### **RTC**
 
@@ -226,7 +226,7 @@ DGUS屏的RTC录入能否单独修改年。
 
 ③然后再做一个数据变量录入，地址009D，变量类型设置变量指针低字节，做一个数量变量显示，地址009D，变量类型VP低字节；低字节改变月。后面日时分秒和年月一样去做，一共6个录入6个显示控键。 做完后点击最开始的009C按键值即可改变时间。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.gif)
+![img](../../images/clip_image002-6525715.gif)
 
  
 
@@ -248,7 +248,7 @@ DGUS屏的RTC显示怎么修改字体大小？
 
 修改x方向点阵数即可。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image008.gif)
+![img](../../images/clip_image002-6525725.gif)
 
  
 
@@ -318,7 +318,7 @@ DGUS屏的曲线控件是用84指令直接对着通道写值，如果是要将�
 
  
 
-![367538141058034748](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image010.gif)
+![367538141058034748](../../images/clip_image002-6525737.gif)
 
  
 
@@ -346,7 +346,7 @@ DGUS屏的曲线控件是用84指令直接对着通道写值，如果是要将�
 
 用按键返回切换页面组合，也就是点击了按键之后实质是界面切换了。推荐用方法1.
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image012.gif)
+![img](../../images/clip_image002-6525745.gif)
 
  
 
@@ -358,9 +358,9 @@ DGUS屏的曲线控件是用84指令直接对着通道写值，如果是要将�
 
 例如设置图标控件地址三个都为0x1001，小图标123,三个按键地址都为0x1001，键值分别为123,每个图标的设置分别上限和下限和键值图片对应整齐就行。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image014.gif)
+![img](../../images/clip_image002-6525753.gif)
 
-### 用位变量图标设置
+​									用位变量图标设置
 
  
 
@@ -402,9 +402,7 @@ DGUS II屏的动画图标控件则是可以设置播放的时间的。
 
  
 
- 
-
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image016.gif)
+![img](../../images/image-20190429161729381.png)
 
 ### **位变量图标显示**
 
@@ -414,7 +412,7 @@ DGUS II屏的动画图标控件则是可以设置播放的时间的。
 
 如果下图都全部勾选，是需要用移动模式，设置固定的像素点进行自行排列。可以分成多个勾选选的控件进行自由排列。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image018.gif)
+![image-20190429161802565](../../images/image-20190429161802565.png)
 
 额外注意辅助地址的定义，辅助地址一般占用2个，单片机指令不参与范围，是屏上面辅助显示用的，当设置的每个位控件用到动画的，辅助地址不能重复使用。如果没有用动画模式，可以统一设置为同样的辅助地址。
 
@@ -430,7 +428,7 @@ ICON1E是指某个为写1的结束的图标，只有动画模式才会用1E的�
 
  
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image020.gif)![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image022.gif)
+![image-20190429161822594](../../images/image-20190429161822594.png)
 
  
 
@@ -490,7 +488,7 @@ ICON1E是指某个为写1的结束的图标，只有动画模式才会用1E的�
 
 首先找到二维码在竖屏中软件上面左上角的点显示的起始坐标例如（157，463），然后修改下图的把二维码控件属性框右边的坐标X，Y调换为（463，157）即可。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image024.gif)
+![img](../../images/clip_image002-6525919.gif)
 
  
 

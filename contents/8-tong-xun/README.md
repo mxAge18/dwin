@@ -1,3 +1,8 @@
+---
+typora-root-url: ../../images
+typora-copy-images-to: ../../images
+---
+
 ## 通讯问题
 
 ### **串口屏和电脑连接异常** 
@@ -81,11 +86,13 @@ DGUSII屏下载了CFG文件之后就不能通讯了。
 
 DGUSI屏比如的C070_15WT 、C050_04WT 和用户CPU的连接距离很短，为了提升波特率又方便接PC调试，迪文的TTL/RS232兼容接口，设计上就是用74系列芯片逻辑门做了反向，发送还是TTL电平，只是反过来，这个不是标准的RS232，**一般这样通讯距离不要超过半米**，和电脑用DB9是可以进行RS232通讯的，屏后面的短接跳线短接后会变成3.3V TTL标准通讯电平。
 
+**							![img](/images/clip_image002-6525174.png)**
+
 迪文DGUSI ，15/16/17/18WT系列带外壳的产品（比如DMT64480T057_18WT），RS232串口是严格的RS232规范，输出电平是+/-5V以上。这种屏通讯距离可以长很多（理想环境是10米）。
 
  
 
-​							**![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.gif)**
+​							****
 
 通常情况，TTL/RS232兼容接口的屏在距离超过1米以上就会发现数据丢失现象比较严重，如果用户的单片机是用了标准的RS232芯片，那么如果进行长距离通讯呢，可以采用如下的办法，屏上面短接为标准3.3V TTL通讯电平，用户做一个TTL转接RS232的标准小板子，或者改用迪文有标准RS232接口的屏。
 
@@ -106,7 +113,7 @@ DGUSI屏比如的C070_15WT 、C050_04WT 和用户CPU的连接距离很短，为�
 大部分芯片都兼容3.3和5V，可以采用串接电阻直连的方法，电阻常用330或470欧姆（留个上拉做备用）；也可以用串接高速二极管，或是用三极管做电平开关。也可以参考下图的转换电路。
 
 下图是3.3V和5V电平的TTL串口转化电路，其中SS14可用其他压降小于0.3V的肖特基二极管代替。 
- 						![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip		_image004.gif)
+ 						![img](/images/clip_image002-6525268.gif)
 
  
 
@@ -121,7 +128,7 @@ MAX3232、MAX232假货非常多，可以用示波器测量下232IC的输入、�
 1、先用串口助手单独测评，测试一定时间后计算发送和屏响应的数据，帧数是否一致，确定屏通信是否有问题。
      2、测试MAX232芯片接收、发送波形是否按程序设计的时间在走，发现是否存在丢波、波形对齐不整齐等现象。如下一个例子：图左图是不正常的232芯片，（UTC3232输出就不对称）的第1个字节解调波形严重失真。右图是正规的芯片波形是对称的。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.gif)![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image008.gif)
+​					![img](/images/clip_image002-6525298.gif)![img](/images/clip_image002-6525308.gif)
 
  
 
@@ -133,7 +140,7 @@ MAX3232、MAX232假货非常多，可以用示波器测量下232IC的输入、�
 
 如何降低误码率，由于RS232/TTL 芯片（如MAX232）的旁路匹配电容，储能能力不足，导致波形失真，建议使用4 颗105 电容。如图。
 
-​							![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image010.gif)
+​							![img](/images/clip_image002-6525351.gif)
  如果还是怀疑有波特率误码问题，串口屏和电脑通讯没有问题，控制板和电脑通讯也没有问题，但是控制板和串口屏通讯就不正常，需要用户将二者的波特率用示波器测试出来，对比波形分析是否波特率误码，迪文屏是可以自定义波特率来修正二者的误差的。
 
  
@@ -146,7 +153,7 @@ MAX3232、MAX232假货非常多，可以用示波器测量下232IC的输入、�
 
 **用串口引线监测的办法**。这种方法听上去难，其实需求的设备极其简单，非常容易操作。如图所示，是市面上一款常见的USB转TTL、RS232、RS485的通讯小板子，测试方法参考：例如测试某个TTL通讯的数据是否正常，将小板子和电脑的USB口插上，驱动安装完成后，用杜邦线m接着转接板的GND，用杜邦线n接着转接板的RXD,杜邦线另外一头最好用工头的（方便用两只手可以戳着代测试引脚进行测量），将m和n两根线另一头分别接着串口屏的GND和RXD（或TXD），这样控制板在给屏发数据的时候，就能够捕捉到经过单片机发给屏的数据了，用串口工具收取之后进行分析查看。（这种方法适用于分析、排查各类与通讯不正常的故障原因）
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image012.gif)
+![img](/image/clip_image002-6525417.gif)
 
 ​	 
 
@@ -194,11 +201,11 @@ b、测量是否由于负载原因，**给控制板通讯芯片供电电压过�
 
 3.打开示波器电源开关，旋转下图中红色框标出来的按钮，并注意看着屏幕上方的时间格，一般将时间旋转到100ms-300ms之间，这个时间是用来抓去波形的，这是调节的横坐标轴。然后旋转黑色框框中的两个按钮，这两个按钮是用来调整纵坐标轴的，旋转坐标线到合适的位置。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image014.gif)
+![img](/images/clip_image002-6525439.gif)
 
 4、调好坐标后，会看到屏幕上有信号划过，如下图：下图每个格子代表的是100ms，如红色框框中标出的。然后按软键盘上的“Run/Stop”键，这个按键会变成红色，并且屏幕不再划动，而是停止，这就是抓到的波形，形状也如下图红框的时间。需要调整时间格，也就是放大，眼睛能数格子看到的那种，才能将每个位显示出来
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image016.gif)
+![img](/images/clip_image002-6525459.gif)
 
 请将屏与电脑连接，在电脑与屏可以通讯的情况下，sscom32 发送0xAA，并设置每100ms 发送一次。请您用示波器测量波特率，**一般收方和发方各自单独的波特率控制建议在正负****2%**以内，（有还可以放宽一点2.5%，**收方和发方两个合起来****5%****肯定是不行的，**这里的多少范围有误差其实没有一个具体定论，本文这里的说法也不一定权威，总之控制误差越小越好），方法如下：
 
@@ -208,9 +215,9 @@ sscom32 发送0xAA，波特率为115200，,请您用示波器的针头测量屏D
 
 误差为（114285-115200）/115200=0.79%，不会影响通讯。
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image018.gif)
+![img](/images/clip_image002-6525480.gif)
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image020.gif)
+![img](/images/clip_image002-6525509.gif)
 
  
 
@@ -228,8 +235,6 @@ sscom32 发送0xAA，波特率为115200，,请您用示波器的针头测量屏D
 
 计算，728/7=104，也就是每个位占用的[微秒](https://www.baidu.com/s?wd=%E5%BE%AE%E7%A7%92&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao)数，1秒等于1000 000微秒，1000000/104=9615.38，测试出来和9600对比误差非常小。
 
- 
-
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image022.gif)
+ 					![img](/images/clip_image002-6525530.gif)
 
 ## 

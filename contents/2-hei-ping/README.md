@@ -28,7 +28,7 @@
 
   
 
-  ![img](/images/clip_image002.png)
+  ​							![img](/images/clip_image002.png)
 
 
 
@@ -43,9 +43,10 @@
 **解决方法：**
 
 - 通常两端蓝色一个朝上，一个朝下，没有与10Pin下触座连接；
+
 - 之前的触摸屏采用双触座子，采用异侧线缆同向接发，但由于屏更换了插座之后同向连接不行了，需要更换为同侧FCC连接线线缆。
 
-![]()
+  ​							![img](/images/clip_image003.png)
 
  
 
@@ -98,11 +99,9 @@ R8=1E         ;30秒不点击触摸屏，触摸屏背光降低到上面R7=10
 如下图示例：设置0x7D0，也就是2000*5ms=10秒的时间，屏幕自动会由满亮度（0x64）降低到四分之一（0x19）亮度.
 ```
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.gif)
+![img](/images/clip_image004.png)
 
-![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image008.gif)
-
- 
+ 					     ![img](/images/clip_image005.png)			
 
 **原因分析7：**
 

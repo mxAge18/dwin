@@ -10,7 +10,7 @@
 
 按钮效果：点击屏幕的某触控按钮，按下去就变色，有一个按下去的效果，迪文屏的按钮效果原理是**加载非当前页的对应触控范围相同坐标区域图片底图**，软件直接设置指定的页面，注意：如果是在另外的底图放置一个显示控件，那个控件的显示是无法用按钮效果加载过来的。虽然设置的触控按钮都是方形区域的，但是底图的设计是自由的，按钮可以做出各种不同风格的效果，如下图的按钮效果示意图参考： 
 
-  ![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image026.gif)![img](file:////Users/invokerx/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image028.gif)
+![image-20190429161931382](../../images/image-20190429161931382.png)
 
 **问题2：**
 
