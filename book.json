@@ -20,26 +20,11 @@
         "splitter",
         "expandable-chapters-small",
         "anchors",
-        "github",
-        "github-buttons",
         "sharing-plus",
         "anchor-navigation-ex",
 	"favicon"
     ],
     "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/mxAge18/dwin"
-        },
-        "github-buttons": {
-            "buttons": [{
-                "user": "maxAge18",
-                "repo": "dwin",
-                "type": "star",
-                "size": "small",
-                "count": true
-                }
-            ]
-        },
         "sharing": {
             "douban": false,
             "facebook": false,
