@@ -5,7 +5,7 @@
 	- [第1节 闪屏](contents/1-shan-ping/README.md)
 	- [第2节 黑屏](contents/2-hei-ping/README.md)
 	- [第3节 白屏](contents/3-bai-ping/README.md)
-	- [第4节 画屏](contents/4-hua-ping/README.md)
+	- [第4节 花屏](contents/4-hua-ping/README.md)
 	- [第5节 触摸问题 ](contents/5-chu-mo/README.md)
 	- [第6节 RTC](contents/6-rtc-shi-jian/README.md)
 	- [第7节 SD下载](contents/7-sd-xia-zai/README.md)
