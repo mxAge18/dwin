@@ -1,3 +1,7 @@
+---
+/typora-root-url: ../../images
+---
+
 ## 黑屏
 
 ### **硬件分析**
@@ -24,7 +28,7 @@
 
   
 
-  ![](http://doc.dwin.com.cn/gitbook/images/1.jpg)
+  ![img](/images/clip_image002.png)
 
 
 
